@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import React from "react";
+import "./App.css";
+import Filter from "./components/Filter";
+import Hotels from "./components/Hotels";
 
-function App() {
+interface HotelCardProps {
+  image: string;
+  alt: string;
+  name: string;
+  price: number;
+  seats: number;
+}
+
+const App: React.FC = () => {
+  const [hotel, setHotel] = React.useState<Array<HotelCardProps>>([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Filter />
+      <Hotels hotel={hotel} />
     </div>
   );
-}
+};
 
 export default App;

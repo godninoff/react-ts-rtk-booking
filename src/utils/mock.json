@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": "../images/hotel1.jpg",
+    "alt": "Отель 1",
+    "name": "Люксовый отель №1",
+    "price": 1000,
+    "seats": 1
+  },
+
+  {
+    "id": 2,
+    "image": "../images/hotel2.jpg",
+    "alt": "Отель 2",
+    "name": "Люксовый отель №2",
+    "price": 2000,
+    "seats": 2
+  },
+
+  {
+    "id": 3,
+    "image": "../images/hotel3.jpg",
+    "alt": "Отель 3",
+    "name": "Люксовый отель №3",
+    "price": 3000,
+    "seats": 3
+  },
+
+  {
+    "id": 4,
+    "image": "../images/hotel4.jpg",
+    "alt": "Отель 4",
+    "name": "Люксовый отель №4",
+    "price": 4000,
+    "seats": 4
+  }
+]
