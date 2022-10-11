@@ -1,25 +1,21 @@
 import Header from "./components/Header";
-import React from "react";
 import "./App.css";
 import Filter from "./components/Filter";
 import Hotels from "./components/Hotels";
+import mock from "./utils/mock.json";
 
-interface HotelCardProps {
-  image: string;
-  alt: string;
-  name: string;
-  price: number;
-  seats: number;
-}
-
-const App: React.FC = () => {
-  const [hotel, setHotel] = React.useState<Array<HotelCardProps>>([]);
-
+const App = () => {
   return (
     <div className="App">
       <Header />
       <Filter />
-      <Hotels hotel={hotel} />
+      <div className="hotel-cards">
+        {mock.map((item) => (
+          <div className="hotel-item" key={item.id}>
+            <Hotels {...item} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

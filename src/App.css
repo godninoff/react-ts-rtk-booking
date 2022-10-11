@@ -1,0 +1,10 @@
+.hotel-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.hotel-item {
+  margin-right: 20px;
+}

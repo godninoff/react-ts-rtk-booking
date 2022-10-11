@@ -1,9 +1,9 @@
 import React from "react";
 import { Card } from "antd";
-import mock from "../utils/mock.json";
 const { Meta } = Card;
 
 interface HotelCardProps {
+  id: number;
   image: string;
   alt: string;
   name: string;
@@ -19,26 +19,17 @@ const Hotels: React.FC<HotelCardProps> = ({
   seats,
 }: HotelCardProps) => {
   return (
-    <div>
-      {mock.map((item) => {
-        return (
-          <div key={item.id}>
-            <div>
-              {image}
-              {alt}
-            </div>
-            <div>{name}</div>
-            <div>{seats}</div>
-            <div>{price}</div>
-          </div>
-
-          //   <Card style={{ width: 300 }} cover={<img alt={alt} src={image} />}>
-          //     <Meta title={name} description={seats} />
-          //
-          //   </Card>
-        );
-      })}
-    </div>
+    <>
+      <Card
+        hoverable
+        style={{ width: 320 }}
+        cover={<img alt={alt} src={image} height="250px" />}
+      >
+        <Meta title={name} />
+        <div>Количество мест: {seats}</div>
+        <div>Стоимость: {price} руб.</div>
+      </Card>
+    </>
   );
 };
 
